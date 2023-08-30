@@ -1,0 +1,42 @@
+/* .tutorbanner {
+  background: url("../../../static/img/tutorBG.jpeg");
+  background-size: cover;
+} */
+/* */
+.featuresDiv {
+  background: #1c60a7;
+  color: white;
+  width: 100%;
+  padding: 45px;
+  text-align: left;
+}
+.rightHeading {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.innerText {
+  margin-left: 20px;
+}
+.rightSubHeading {
+  margin-left: 35px;
+  font-size: 18px;
+}
+.tutor {
+  background-image: linear-gradient(to right, #040406, #21293c);
+
+  color: white;
+  width: 100%;
+  padding: 45px;
+  text-align: left;
+}
+.tutor-innerText {
+  margin-left: 45px;
+  font-size: 50px;
+}
+.tutorBtn {
+  background-color: green;
+  margin-top: 20px;
+  margin-left: 45px;
+  /* font-size: 50px; */
+}

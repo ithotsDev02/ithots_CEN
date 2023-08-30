@@ -1,0 +1,10 @@
+.ant-collapse-content-box > ul > li {
+  list-style: none;
+  padding: 5px;
+}
+.ant-tag {
+  margin: 5px !important;
+}
+.ant-collapse-content-box > ul {
+  padding-left: 10px;
+}

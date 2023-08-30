@@ -1,0 +1,23 @@
+.DraftEditor-root {
+  position: relative;
+  font-family: "Inter", sans-serif !important;
+}
+.RichTextEditor__root___2QXK- {
+  border: 0.5px solid #e3e6ef !important;
+  border-radius: 5px !important;
+}
+.dcvquE .basic-form-inner {
+  width: 80% !important;
+  /* margin-bottom: 100px; */
+  /* left: 20%; */
+  /* right: auto; */
+  margin-left: 10% !important;
+  margin-right: 10% !important;
+}
+
+
+
+
+.ant-picker-range{
+  width: 100%;
+}

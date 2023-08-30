@@ -1,0 +1,108 @@
+.learning_div {
+  margin-top: 15px;
+  padding: 15px;
+  background: #fefed6;
+  border-radius: 6px;
+  /* font-weight: 600; */
+  /* color: rgb(95, 99, 242); */
+  /* font-size: 15px; */
+}
+.learning_div > h2 {
+  /* color: rgb(95, 99, 242); */
+  /* font-weight: 700; */
+  /* font-size: 28px; */
+  /* text-align: center; */
+}
+.learning_div > div {
+  /* text-align: center; */
+}
+.courseDetail > h2 {
+  font-weight: 600;
+  font-size: 25px;
+}
+.courseDetail > div {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.learning_div > div > span {
+  margin: 10px;
+}
+.course_about > h2 {
+  margin-top: 30px;
+}
+.course_specialDescription > h2 {
+  margin-top: 20px;
+}
+.course_specialDescription > p {
+  margin-top: 10px;
+  /* padding: 30px; */
+  /* background: #f4f5f7; */
+  /* border-radius: 15px; */
+  /* color: rgb(95, 99, 242); */
+  /* font-size: 15px; */
+}
+.course_tnc > h2 {
+  margin-top: 20px;
+}
+.course_tnc > p {
+  /* margin-top: 10px; */
+  /* padding: 30px; */
+  /* background: rgba(250, 139, 12, 0.1); */
+  /* border-radius: 15px; */
+  /* color: rgb(250, 139, 12); */
+  font-size: 12px;
+}
+
+.course_level {
+  margin-top: 40px;
+  padding: 30px;
+  background: #f4f5f7;
+  /* font-weight: 400; */
+  color: rgb(95, 99, 242);
+  font-size: 15px;
+}
+.course_level > h2 {
+  color: rgb(95, 99, 242);
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+}
+.course_level > div {
+  text-align: center;
+}
+.course_level > div > span {
+  margin: 10px;
+}
+.similarcourses_div > div {
+  max-height: 300px;
+}
+
+/* .similarcourses_div > span {
+  display: flex;
+  overflow-x: auto;
+}
+.similarCourses_div > span::-webkit-scrollbar {
+  display: none;
+} */
+.detailsContainer {
+  /* width: 80%; */
+  background: white;
+  margin-top: 3%;
+  /* margin-right: 10%;
+   */
+}
+.breadcrumb > .ant-breadcrumb {
+  padding: 15px;
+}
+.breadcrumb > .ant-breadcrumb a {
+  color: #5e63f2 !important;
+}
+
+.ant-rate {
+  font-size: 20 !important;
+  margin-bottom: 10px;
+}
+.intructor {
+  margin-top: 10px;
+}

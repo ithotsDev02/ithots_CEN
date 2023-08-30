@@ -1,0 +1,28 @@
+.batchInfo {
+  @media (max-width: 699px) {
+    /* padding: 0 20px; */
+  }
+}
+/* 
+   @media only screen and (min-width: 600px) {
+   margin-top: -30px;
+
+   
+  } */
+  .ant-rate-star.ant-rate-star-full,
+  .ant-rate-star.ant-rate-star-zero,
+  .ant-rate-star.ant-rate-star-half.ant-rate-star-active {
+      transition: transform 0s;
+  }
+
+  .ant-rate-star.ant-rate-star-half.ant-rate-star-active:hover {
+      transform: scale(0.91);
+  }
+
+  .ant-rate-star.ant-rate-star-full:hover {
+      transform: scale(0.91);
+  }
+
+  .ant-rate-star.ant-rate-star-zero:hover {
+      transform: scale(0.91);
+  }

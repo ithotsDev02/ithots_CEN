@@ -1,0 +1,16 @@
+.swiper-container
+  swiper-container-initialized
+  swiper-container-horizontal
+  swiper-container-pointer-events {
+  max-height: 350px !important;
+  background: white !important;
+}
+.testimonial-block.theme-2 .swiper-container {
+  background: white !important;
+}
+.ant-card-meta {
+  margin: 5px;
+}
+.ant-card ant-card-bordered {
+  border: solid 1px lightgray !important;
+}
