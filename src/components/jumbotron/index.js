@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { Button, Input } from "antd";
 import SelectInput from "../SelectInput";
 import Flex from "../flex/index";
+import { TopMenuSearch } from "../../layout/style"
+import FeatherIcon from "feather-icons-react";
 import "./style.css";
 const InputGroup = Input.Group;
 
@@ -169,12 +171,12 @@ const Jumbotron = ({
   return (
     <Wrapper column bgimg={bgimg}>
       <Container2>Seek. Learn. Interact. LIVE
-</Container2>
+      </Container2>
       <DescriptionText>
-      World's largest Christian Entrepreneur Network 
+        World's largest Christian Entrepreneur Network
 
       </DescriptionText>
-      <Container center centerVertically>
+      {/* <Container center centerVertically>
         <StyledInputGroup compact style={{ display: "flex", flex: 1 }}>
           <SelectInput
             setIsLoading={setIsLoading}
@@ -202,8 +204,8 @@ const Jumbotron = ({
             top={85}
             page={page}
             textInputId={searchInputId}
-          ></SelectInput>
-          {/* <InputBoxDivider />
+          ></SelectInput> */}
+      {/* <InputBoxDivider />
           <SelectInput
             setIsLoading={setIsLoading}
             isLoading={isLoading}
@@ -226,7 +228,7 @@ const Jumbotron = ({
             top={175}
             textInputId={findInputId}
           ></SelectInput> */}
-          <SearchButton
+      {/* <SearchButton
             style={{
               borderRadius: "3px", backgroundColor: "#ec5252",
             }}
@@ -236,13 +238,41 @@ const Jumbotron = ({
             Search
           </SearchButton>
         </StyledInputGroup>
-      </Container>
+      </Container> */}
+
+      <TopMenuSearch>
+        <div className=" d-flex p-relative pb-60">
+          {/* <Link
+                          className={`${
+                            activeSearch
+                              ? "search-toggle active"
+                              : "search-toggle"
+                          }`}
+                          onClick={() => {
+                            toggleSearch();
+                          }}
+                          to="#"
+                        >
+                          <FeatherIcon icon="search" />
+                          <FeatherIcon icon="x" />
+                        </Link> */}
+          <div
+            className="topMenu-search-form"
+          >
+            <form action="">
+              <span className="search-icon">
+                <FeatherIcon icon="search" />
+              </span>
+              <input type="text" name="search" placeholder="Search for anything" />
+            </form>
+          </div>
+        </div>
+      </TopMenuSearch>
     </Wrapper>
-     
+
   );
 
 
 };
 
 export default Jumbotron;
- 

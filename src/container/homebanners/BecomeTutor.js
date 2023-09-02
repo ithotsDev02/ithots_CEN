@@ -28,7 +28,7 @@ const BecomeTutor = () => {
                     <div  className="sDash_support-content">
                       <h2 style={{color: "#18113c", fontSize:"32px"}} className="sDash_support-content__title">Join Our Growing Tutor and teach</h2>
                       <h3 style={{fontSize: "20px"}} className="gurqool-blue"></h3>
-                      <p style={{fontSize: "15px", width: "80%"}}>GurQool is a platform that aims to create a global community of tutors and students through a seamless search, select, interact and learning experience all done over live sessions.</p>
+                      <p style={{fontSize: "15px", width: "80%"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam luctus, odio vel lacinia mattis, nunc odio sollicitudin tellus, vel vulputate purus nulla eget elit.</p>
                       <Button style={{background: "#cc5252"}} className="btn-ticket" size="large" type="primary" raised onClick={() => (window.location = "/auth/tutor/signup")}>
                         Join Now
                         

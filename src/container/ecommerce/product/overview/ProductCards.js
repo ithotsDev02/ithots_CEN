@@ -134,10 +134,10 @@ const ProductCards = ({
                     cover={
                       <div class="imgcontainer">
                         <img
-                          height="190px"
+                          height="195px"
                           style={{ cursor: "pointer" }}
                           // width="380px"
-                          width="100%"
+                          width="324px"
                           alt="courseImage"
                           onClick={() =>
                             history.push({

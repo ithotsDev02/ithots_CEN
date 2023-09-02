@@ -610,6 +610,12 @@ const TopMenuSearch = Styled.div`
         position: relative;
         float: ${({ theme }) => (theme.rtl ? 'left' : 'right')};
     }
+    .p-relative{
+        position:relative;
+    }
+    .pb-60{
+        padding-bottom:60px
+    }
     .search-toggle{
         display: flex;
         align-items: center;
@@ -635,13 +641,10 @@ const TopMenuSearch = Styled.div`
         }
     }
     .topMenu-search-form{
-        position: absolute;
-        ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 15px;
-        top: 12px;
-        background-color: #fff;   
+        top: 12px;  
         border-radius: 25px;
         height: 40px;
-        width: 100%;
+        width: 500px;
         display: block;
         
         .search-icon{
@@ -650,9 +653,9 @@ const TopMenuSearch = Styled.div`
             position: absolute;
             left: 15px;
             ${({ theme }) => (theme.rtl ? 'right' : 'left')}: 15px;
-            top: 50%;
+            top: 20%;
             transform: translateY(-50%);
-            z-index: 9999;
+            z-index: 9;
         }
         i,
         svg{
@@ -671,7 +674,6 @@ const TopMenuSearch = Styled.div`
             border: 1px solid black;
             height: 38px;
             padding-left: 40px;
-            z-index: 999;
             ${({ theme }) => (theme.rtl ? 'padding-right' : 'padding-left')}: 40px;
             
         }

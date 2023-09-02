@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Row, Col, Collapse } from "antd";
 import FeatherIcon from "feather-icons-react";
-import { SupportTopWrap, SupportContentWrap,HomeJoinTutor, FaqWrapper } from "../pages/style";
+import { SupportTopWrap, SupportContentWrap, HomeJoinTutor, FaqWrapper } from "../pages/style";
 import { PageHeader } from "../../components/page-headers/page-headers";
 import { Cards } from "../../components/cards/frame/cards-frame";
 import { Main } from "../styled";
@@ -24,7 +24,7 @@ const customPanelStyle = {
 const Support = () => {
   return (
     <>
-     {/*} <PageHeader
+      {/*} <PageHeader
         title="Support Center"
         buttons={[
           <div key="1" className="page-header-actions">
@@ -41,12 +41,12 @@ const Support = () => {
       <Main>
         <Row gutter={25}>
           <Col xs={24}>
-            
+
             <SupportContentWrap>
-           
+
               <div className="sDash-support-container">
-              <h2 style = {{align: "center", paddingBottom:"20px"}} >Top Categories</h2>
-                     
+                <h2 style={{ align: "center", paddingBottom: "20px" }} >Top Categories</h2>
+
                 <div className="sDash-support-links">
                   <Row gutter={30}>
                     <Col lg={6} xs={24}>
@@ -133,7 +133,7 @@ const Support = () => {
     </div>*/}
                       </div>
                     </Col>
-                   
+
                     <Col lg={6} xs={24}>
                       <div className="sDash-support-link-item">
                         <div className="sDash-support-link-item__icon primary">
@@ -162,7 +162,7 @@ const Support = () => {
     </div>*/}
                       </div>
                     </Col>
-                    
+
                   </Row>
                 </div>
                 {/*<div className="sDash_faq-block">
@@ -334,13 +334,13 @@ const Support = () => {
                 <Row align="middle">
                   <Col lg={16} sm={14} xs={24}>
                     <div className="sDash_support-content">
-                      <h2 className="sDash_support-content__title"  style={{ fontSize: "30px" , fontWeight: 800}}>Join Our Growing Tutor and teach your</h2>
-                      <h3  style={{ color: "#ec5252", fontSize: "20px" }}>World's largest online LIVE  teaching platform 
-</h3>
-<p style={{padding:"30px:"}}>GurQool is a platform that aims to create a global community of tutors and students through a seamless search, select, interact and learning experience all done over live sessions. 
+                      <h2 className="sDash_support-content__title" style={{ fontSize: "30px", fontWeight: 800 }}>Join Our Growing Tutor and teach your</h2>
+                      <h3 style={{ color: "#ec5252", fontSize: "20px" }}>World's largest online LIVE  teaching platform
+                      </h3>
+                      <p style={{ padding: "30px:" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam luctus, odio vel lacinia mattis, nunc odio sollicitudin tellus, vel vulputate purus nulla eget elit.
 
 
-</p>
+                      </p>
 
                       <Button className="btn-ticket" size="large" type="primary" raised>
                         Join as Tutor
@@ -350,7 +350,7 @@ const Support = () => {
 
                   <Col lg={8} sm={10} xs={24}>
                     <div className="sDash_support-img" style={{ padding: "5%" }}>
-                    
+
                       <img src={require(`../../static/img/become_tutor.png`)} alt="" />
                     </div>
                   </Col>

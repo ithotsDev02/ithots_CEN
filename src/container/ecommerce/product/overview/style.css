@@ -73,7 +73,7 @@
   cursor: pointer;
 }
 .ant-card-cover img {
-  border-radius: 0px !important;
+  border-radius: 10px !important;
 }
 
 .course_discription {
@@ -260,6 +260,7 @@ footer {
   font-size: 13;
   font-weight: 600;
   color: #0f1010;
+  padding-left: 5px;
 }
 .coursedesc {
   color: #ffffff;
@@ -310,4 +311,7 @@ footer {
 .bottomright > .ant-rate {
   font-size: 11px !important;
   margin: 5px;
+}
+.ant-card{
+  border: none;
 }

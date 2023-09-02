@@ -275,12 +275,12 @@ const ThemeLayout = (WrappedComponent, type) => {
                       usr_role === "student"
                         ? "/home"
                         : usr_role === "tutor"
-                        ? "/tutor"
-                        : usr_role === "admin"
-                        ? "/admin"
-                        : usr_role === "sadmin"
-                        ? "/sadmin"
-                        : "/home"
+                          ? "/tutor"
+                          : usr_role === "admin"
+                            ? "/admin"
+                            : usr_role === "sadmin"
+                              ? "/sadmin"
+                              : "/home"
                     }
                   >
                     <img
@@ -299,9 +299,9 @@ const ThemeLayout = (WrappedComponent, type) => {
                     <TopMenu />
                   ) : (
                     <>
-                    <TopMenuSearch>
-                      <div className=" d-flex">
-                        {/* <Link
+                      {/* <TopMenuSearch>
+                      <div className=" d-flex"> */}
+                      {/* <Link
                           className={`${
                             activeSearch
                               ? "search-toggle active"
@@ -315,7 +315,7 @@ const ThemeLayout = (WrappedComponent, type) => {
                           <FeatherIcon icon="search" />
                           <FeatherIcon icon="x" />
                         </Link> */}
-                        <div
+                      {/* <div
                           className="topMenu-search-form"
                         >
                           <form action="">
@@ -326,7 +326,7 @@ const ThemeLayout = (WrappedComponent, type) => {
                           </form>
                         </div>
                       </div>
-                    </TopMenuSearch>
+                    </TopMenuSearch> */}
                     </>
                     // <HeaderSearch rtl={rtl} darkMode={darkMode} />
                   )}
@@ -370,7 +370,7 @@ const ThemeLayout = (WrappedComponent, type) => {
                     // </TopMenuSearch>
                   ) : (
                     // <AuthInfo />
-                     <AuthInfo />
+                    <AuthInfo />
                   )}
 
                   {/* <div>test</div> */}
@@ -399,7 +399,7 @@ const ThemeLayout = (WrappedComponent, type) => {
               </Row>
               <Layout style={{ marginLeft: "-20px", marginRight: "-30px" }}>
                 {(!isLoggedIn && window.innerWidth > 991) ||
-                (usr_role == "student" && window.innerWidth > 991) ? (
+                  (usr_role == "student" && window.innerWidth > 991) ? (
                   <>
                     {this.state.isLoading === true ? (
                       // <Row
@@ -464,12 +464,12 @@ const ThemeLayout = (WrappedComponent, type) => {
                                         <SubMenu
                                           key={cat.category.id}
                                           title={cat.category.name}
-                                          // onClick={() =>
-                                          //   this.filterByCategory(
-                                          //     cat.category.id,
-                                          //     ""
-                                          //   )
-                                          // }
+                                        // onClick={() =>
+                                        //   this.filterByCategory(
+                                        //     cat.category.id,
+                                        //     ""
+                                        //   )
+                                        // }
                                         >
                                           {cat.subCategories.map((subcat) => (
                                             <>
@@ -519,8 +519,8 @@ const ThemeLayout = (WrappedComponent, type) => {
             </div>
             <Layout>
               {isLoggedIn &&
-              (!topMenu || window.innerWidth <= 991) &&
-              (usr_role !== "student" || window.innerWidth <= 991) ? (
+                (!topMenu || window.innerWidth <= 991) &&
+                (usr_role !== "student" || window.innerWidth <= 991) ? (
                 <ThemeProvider theme={darkTheme}>
                   <Sider
                     width={280}
@@ -563,7 +563,7 @@ const ThemeLayout = (WrappedComponent, type) => {
                       // (!isLoggedIn && window.innerWidth <= 991) ||
                       // (usr_role == "student" && window.innerWidth <= 991)
                       (!isLoggedIn && window.innerWidth > 991) ||
-                      (usr_role == "student" && window.innerWidth > 991)
+                        (usr_role == "student" && window.innerWidth > 991)
                         ? "100px"
                         : "",
                   }}
@@ -581,13 +581,12 @@ const ThemeLayout = (WrappedComponent, type) => {
                       <Row gutter={25}>
                         <Col sm={24} md={12}>
                           <h6>About</h6>
-                          <p style={{ textAlign: "justify"}}>
-                            Gurqool is an initiative to help the students in
-                            learning new skills and keep them update to date
-                            with industry standards in various skills. Gurqool
-                            focuses on providing the most. We will help students
-                            build up concepts in different skills such as Dance,
-                            Singing, Drawing, IT, Testing, Development, etc.
+                          <p style={{ textAlign: "justify" }}>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam luctus, odio vel lacinia mattis, nunc odio sollicitudin tellus, vel vulputate purus nulla eget elit.
+                            Pellentesque eget nulla non quam commodo interdum. Proin congue tortor non velit euismod, nec gravida arcu cursus. Nulla facilisi. Fusce at leo vitae velit blandit congue.
+                            Quisque eleifend turpis eu quam auctor, vel dictum velit hendrerit. Integer feugiat, orci in blandit iaculis, quam lectus imperdiet justo, id facilisis arcu sapien id justo.
+                            Nam feugiat ipsum vel eros consectetur dignissim. Curabitur tincidunt, arcu et volutpat suscipit, nulla augue ultrices lectus, ac congue justo nunc vel augue.
+
                           </p>
                         </Col>
                         <Col xs={12} md={6}>
@@ -662,7 +661,7 @@ const ThemeLayout = (WrappedComponent, type) => {
                         <Col md={16} sm={12} xs={24}>
                           <p class="copyright-text">
                             Copyright &copy; 2021 All Rights Reserved by &nbsp;
-                            <a href="https://lokesh-online.web.app">Gurqool</a>.
+                            <a href="https://lokesh-online.web.app">CEN</a>.
                           </p>
                         </Col>
                       </Row>
