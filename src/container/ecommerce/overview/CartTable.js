@@ -38,7 +38,7 @@ const CartTable = ({ cartData }) => {
             <FigureCart>
               <img
                 style={{ width: 80 }}
-                src={"https://api.esculae.com/" + data.courseInfo.image}
+                src={"https://api-v2.esculae.com/" + data.courseInfo.image}
                 // src={require(`../../../${img}`)}
                 alt=""
               />

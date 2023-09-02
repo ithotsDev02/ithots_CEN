@@ -93,7 +93,7 @@ const Grid = ({
   const saveTxnDetails = (event) => {
     let id = coursePaymentInfo.payment.id;
     const coursesURL =
-      "https://api.esculae.com/api/v1/course/transactions/" + id;
+      "https://api-v2.esculae.com/api/v1/course/transactions/" + id;
     axiosInstance
       .put(
         coursesURL,
@@ -130,7 +130,7 @@ const Grid = ({
     //cashfree integration
     let randTxnID = Math.floor(100000 + Math.random() * 900000);
     const coursesURL =
-      "https://api.esculae.com/api/v1/course/calculateSecretKey";
+      "https://api-v2.esculae.com/api/v1/course/calculateSecretKey";
     axiosInstance
       .post(
         coursesURL,
@@ -268,7 +268,7 @@ const Grid = ({
                             : calledFrom == "profilepage" ||
                               calledFrom == "Student"
                               ? 8
-                              : 8
+                              : 6
                         }
                         md={
                           isTutor || calledFrom == "admin"
@@ -331,7 +331,7 @@ const Grid = ({
                               : calledFrom == "profilepage" ||
                                 calledFrom == "Student"
                                 ? 8
-                                : 8
+                                : 6
                           }
                           md={
                             isTutor || calledFrom == "admin"

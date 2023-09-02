@@ -144,7 +144,7 @@ const EnrolledStudents = () => {
     setisLoading(true);
     let URL = "";
     URL =
-      "https://api.esculae.com/api/v1/personal/faculty-course-payment-list";
+      "https://api-v2.esculae.com/api/v1/personal/faculty-course-payment-list";
     axiosInstance
       .get(URL, {
         headers: {
@@ -197,7 +197,7 @@ const EnrolledStudents = () => {
                 <img
                   style={{ width: 80, borderRadius: "15px" }}
                   src={
-                    "https://api.esculae.com/" +
+                    "https://api-v2.esculae.com/" +
                     data.course_from_enroll_course?.image
                   }
                   alt=""

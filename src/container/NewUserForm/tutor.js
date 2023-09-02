@@ -63,7 +63,7 @@ const RegistrationForm = ({ type }) => {
   useEffect(() => {
     if (type === "tutor") {
       let url =
-        "https://api.esculae.com/api/v1/personal/faculty/" + currentUserId ||
+        "https://api-v2.esculae.com/api/v1/personal/faculty/" + currentUserId ||
         0;
       axiosInstance
         .get(url, {
@@ -76,7 +76,7 @@ const RegistrationForm = ({ type }) => {
           setprevprofileurl(resp.data.image);
           let usrImage = "";
           if (resp.data.image && resp.data.image !== undefined) {
-            usrImage = "https://api.esculae.com/" + resp.data.image;
+            usrImage = "https://api-v2.esculae.com/" + resp.data.image;
           }
           setimgurl(usrImage);
           setDOB(moment(resp.data.dob));
@@ -115,7 +115,7 @@ const RegistrationForm = ({ type }) => {
         });
     } else if (type === "student") {
       let url =
-        "https://api.esculae.com/api/v1/personal/student/" + currentUserId ||
+        "https://api-v2.esculae.com/api/v1/personal/student/" + currentUserId ||
         0;
       axiosInstance
         .get(url, {
@@ -128,7 +128,7 @@ const RegistrationForm = ({ type }) => {
           setprevprofileurl(resp.data.image);
           let usrImage = "";
           if (resp.data.image && resp.data.image !== undefined) {
-            usrImage = "https://api.esculae.com/" + resp.data.image;
+            usrImage = "https://api-v2.esculae.com/" + resp.data.image;
           }
           setimgurl(usrImage);
           setDOB(moment(resp.data.dob || ""));
@@ -168,7 +168,7 @@ const RegistrationForm = ({ type }) => {
   useEffect(() => {
     if (tutorinfo) {
       if (tutorinfo && tutorinfo.image && tutorinfo.image != undefined) {
-        toDataURL("https://api.esculae.com/" + tutorinfo?.image).then(
+        toDataURL("https://api-v2.esculae.com/" + tutorinfo?.image).then(
           (dataUrl) => {
             var fileData = dataURLtoFile(dataUrl, "imageName.jpg");
             console.log("after image fiel;", fileData);
@@ -191,7 +191,7 @@ const RegistrationForm = ({ type }) => {
   }
   useEffect(() => {
     let categories = [];
-    let url = "https://api.esculae.com/api/v1/course/category";
+    let url = "https://api-v2.esculae.com/api/v1/course/category";
     axiosInstance
       .get(url, {
         headers: {

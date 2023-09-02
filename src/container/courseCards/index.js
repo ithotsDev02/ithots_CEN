@@ -43,7 +43,7 @@ const Courses = ({ courses, calledFrom, showSearch }) => {
   useEffect(() => {
     var faculty = "";
     // dispatch(getAllCourses());
-    faculty = "https://api.esculae.com/api/v1/personal/faculty";
+    faculty = "https://api-v2.esculae.com/api/v1/personal/faculty";
     axiosInstance
       .get(faculty, {
         headers: {

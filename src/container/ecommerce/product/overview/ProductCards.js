@@ -151,7 +151,7 @@ const ProductCards = ({
                           }
                           src={
                             course.image
-                              ? "https://api.esculae.com/" + course.image
+                              ? "https://api-v2.esculae.com/" + course.image
                               : require(`../../../../static/img/blank.jpg`)
                           }
                         />
@@ -252,7 +252,7 @@ const ProductCards = ({
                       <Avatar
                         src={
                           (course.created_by?.image &&
-                            "https://api.esculae.com/" +
+                            "https://api-v2.esculae.com/" +
                               course.created_by?.image) ||
                           "https://cdn0.iconfinder.com/data/icons/user-pictures/100/matureman1-512.png"
                         }
@@ -336,7 +336,6 @@ const ProductCards = ({
                 cover={
                   <div class="imgcontainer">
                     <img
-                      height="190px"
                       style={{ cursor: "pointer" }}
                       // width="380px"
                       width="100%"
@@ -356,7 +355,7 @@ const ProductCards = ({
                       }
                       src={
                         course.image
-                          ? "https://api.esculae.com/" + course.image
+                          ? "https://api-v2.esculae.com/" + course.image
                           : require(`../../../../static/img/blank.jpg`)
                       }
                     />
@@ -400,7 +399,7 @@ const ProductCards = ({
                   <Avatar
                     src={
                       (course.created_by?.image &&
-                        "https://api.esculae.com/" +
+                        "https://api-v2.esculae.com/" +
                           course.created_by?.image) ||
                       "https://cdn0.iconfinder.com/data/icons/user-pictures/100/matureman1-512.png"
                     }

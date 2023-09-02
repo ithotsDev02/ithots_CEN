@@ -25,7 +25,7 @@ const {
 const getAllTutors = () => {
   return async (dispatch) => {
     dispatch(getAllTutorsBegin());
-    let url = "https://api.esculae.com/api/v1/personal/faculty";
+    let url = "https://api-v2.esculae.com/api/v1/personal/faculty";
     axiosInstance
       .get(url, {
         headers: {
@@ -44,7 +44,7 @@ const getAllTutors = () => {
 const createNewTutorProfile = (data, id) => {
   return async (dispatch) => {
     dispatch(createNewTutorProfileBegin());
-    let url = "https://api.esculae.com/api/v1/personal/faculty/" + id;
+    let url = "https://api-v2.esculae.com/api/v1/personal/faculty/" + id;
     axiosInstance
       .put(url, data)
       .then((resp) => {
@@ -69,7 +69,7 @@ const resetCreationResponse = () => {
 const createNewCourse = (data, callback) => {
   return async (dispatch) => {
     dispatch(createNewCourseBegin());
-    let url = "https://api.esculae.com/api/v1/course/course";
+    let url = "https://api-v2.esculae.com/api/v1/course/course";
     axiosInstance
       .post(url, data)
       .then((resp) => {
@@ -92,9 +92,9 @@ const getAllCourses = (type) => {
     dispatch(getAllCoursesBegin());
     let url = "";
     if (type === "tutor") {
-      url = "https://api.esculae.com/api/v1/course/course";
+      url = "https://api-v2.esculae.com/api/v1/course/course";
     } else {
-      url = "https://api.esculae.com/api/v1/personal/student-enroll-course";
+      url = "https://api-v2.esculae.com/api/v1/personal/student-enroll-course";
     }
     axiosInstance
       .get(url, {
@@ -124,7 +124,7 @@ const saveBankInformation = (info, setBankDetails, setisLoading) => {
   return async (dispatch) => {
     setisLoading(true);
 
-    let url = "https://api.esculae.com/api/v1/personal/bank_details";
+    let url = "https://api-v2.esculae.com/api/v1/personal/bank_details";
     axiosInstance
       .post(url, info, {
         headers: {
@@ -155,7 +155,7 @@ const updateBankInformation = (info, id, setBankDetails, setisLoading) => {
   return async (dispatch) => {
     setisLoading(true);
 
-    let url = "https://api.esculae.com/api/v1/personal/bank_details/" + id;
+    let url = "https://api-v2.esculae.com/api/v1/personal/bank_details/" + id;
     axiosInstance
       .put(url, info, {
         headers: {
@@ -188,7 +188,7 @@ const getBankInformation = (tutorid, setBankDetails, setisLoading) => {
     setisLoading(true);
     // dispatch(getBankInfoBegin());
     let url =
-      "https://api.esculae.com/api/v1/personal/bank_details/" + tutorid;
+      "https://api-v2.esculae.com/api/v1/personal/bank_details/" + tutorid;
     axiosInstance
       .get(url, {
         headers: {

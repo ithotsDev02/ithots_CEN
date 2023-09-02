@@ -24,7 +24,7 @@ const resetPassword = (data, setisLocLoading) => {
   return async (dispatch) => {
     setisLocLoading(true);
     let url =
-      "https://api.esculae.com/api/v1/personal/student-forgot-password";
+      "https://api-v2.esculae.com/api/v1/personal/student-forgot-password";
     axiosInstance
       .post(url, data, {
         headers: {
@@ -47,7 +47,7 @@ const resetPassword = (data, setisLocLoading) => {
 };
 const getAllStudents = () => {
   return async (dispatch) => {
-    let url = "https://api.esculae.com/api/v1/personal/student";
+    let url = "https://api-v2.esculae.com/api/v1/personal/student";
     dispatch(getAllStudentsBegin());
     axiosInstance
       .get(url, {
@@ -70,7 +70,7 @@ const createNewStudent = (data, id) => {
   return async (dispatch) => {
     dispatch(createNewStudentBegin());
 
-    let url = "https://api.esculae.com/api/v1/personal/student/" + id;
+    let url = "https://api-v2.esculae.com/api/v1/personal/student/" + id;
     axiosInstance
       .put(url, data)
       .then((resp) => {
@@ -93,7 +93,7 @@ const editStudent = (data) => {
   return async (dispatch) => {
     dispatch(editStudentBegin());
 
-    let url = "https://api.esculae.com/api/v1/personal/signup";
+    let url = "https://api-v2.esculae.com/api/v1/personal/signup";
     axiosInstance
       .put(url, JSON.stringify(data), {
         headers: {
@@ -118,7 +118,7 @@ const deleteStudent = (data) => {
   return async (dispatch) => {
     dispatch(deleteStudentBegin());
 
-    let url = "https://api.esculae.com/api/v1/personal/signup";
+    let url = "https://api-v2.esculae.com/api/v1/personal/signup";
     axiosInstance
       .put(url, JSON.stringify(data), {
         headers: {

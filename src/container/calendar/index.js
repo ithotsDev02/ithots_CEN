@@ -63,7 +63,7 @@ const Dashboard = () => {
   }, [currentBatchInfo]);
   const getBatchInfo = (eventId) => {
     if (eventId !== "") {
-      let url = "https://api.esculae.com/api/v1/course/batch/" + eventId;
+      let url = "https://api-v2.esculae.com/api/v1/course/batch/" + eventId;
       axiosInstance
         .get(url, {
           headers: {
@@ -79,7 +79,7 @@ const Dashboard = () => {
     }
   };
   const getBatches = () => {
-    let url = `https://api.esculae.com/api/v1/course/batch?created_by=${localStorage.currentUserInfo}`;
+    let url = `https://api-v2.esculae.com/api/v1/course/batch?created_by=${localStorage.currentUserInfo}`;
     axiosInstance
       .get(url, {
         headers: {

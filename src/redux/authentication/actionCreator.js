@@ -20,7 +20,7 @@ const signup = (userinfo, endpoint) => {
   return async (dispatch) => {
     dispatch(signupBegin());
 
-    let url = "https://api.esculae.com/api/v1/personal" + endpoint;
+    let url = "https://api-v2.esculae.com/api/v1/personal" + endpoint;
     axiosInstance
       .post(url, JSON.stringify(userinfo), {
         headers: {
@@ -46,13 +46,13 @@ const login = (user, type) => {
     var userRole;
     let url;
     if (type === "sadmin56355") {
-      url = "https://api.esculae.com/api/v1/business/login";
+      url = "https://api-v2.esculae.com/api/v1/business/login";
     } else if (type === "admin83606") {
-      url = "https://api.esculae.com/api/v1/personal/login";
+      url = "https://api-v2.esculae.com/api/v1/personal/login";
     } else if (type === "tutor") {
-      url = "https://api.esculae.com/api/v1/personal/faculty-login";
+      url = "https://api-v2.esculae.com/api/v1/personal/faculty-login";
     } else if (type === "student") {
-      url = "https://api.esculae.com/api/v1/personal/student-login";
+      url = "https://api-v2.esculae.com/api/v1/personal/student-login";
     }
 
     axiosInstance

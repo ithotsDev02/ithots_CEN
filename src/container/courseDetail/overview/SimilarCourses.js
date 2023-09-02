@@ -76,7 +76,7 @@ const SimilarCourses = ({ courseList }) => {
                                 },
                               })
                             }
-                            src={"https://api.esculae.com/" + course.image}
+                            src={"https://api-v2.esculae.com/" + course.image}
                           />
                         }
                         actions={[
@@ -105,7 +105,7 @@ const SimilarCourses = ({ courseList }) => {
                             <Avatar
                               src={
                                 (course.created_by?.image &&
-                                  "https://api.esculae.com/" +
+                                  "https://api-v2.esculae.com/" +
                                     course.created_by?.image) ||
                                 ""
                               }

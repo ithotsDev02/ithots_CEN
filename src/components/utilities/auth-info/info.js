@@ -105,7 +105,7 @@ const AuthInfo = () => {
             width="53px"
             src={
               userImg !== ""
-                ? "https://api.esculae.com/" + userImg
+                ? "https://api-v2.esculae.com/" + userImg
                 : require("../../../static/img/avatar/chat-auth.png")
             }
             alt=""
@@ -293,7 +293,7 @@ const AuthInfo = () => {
               <Avatar
                 src={
                   state.userImage !== ""
-                    ? "https://api.esculae.com/" + state.userImage
+                    ? "https://api-v2.esculae.com/" + state.userImage
                     : "https://cdn0.iconfinder.com/data/icons/user-pictures/100/matureman1-512.png"
                 }
               />

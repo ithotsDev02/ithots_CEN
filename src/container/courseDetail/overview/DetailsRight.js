@@ -166,7 +166,7 @@ const DetailsRight = ({ price, courseBatches, courseInfo, calledFrom }) => {
       const data = { ...values, studentId: parseInt(localStorage.currentUserInfo), facultyId: courseInfo.created_by.id, courseId: courseInfo.id }
       console.log('Success:', data);
 
-      axiosInstance.post('https://api.esculae.com/api/v1/course/testimonial', data)
+      axiosInstance.post('https://api-v2.esculae.com/api/v1/course/testimonial', data)
         .then(function (response) {
 
         })

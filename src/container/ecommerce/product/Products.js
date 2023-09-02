@@ -133,7 +133,7 @@ const Product = ({
   }, []);
 
   useEffect(() => {
-    const categoryURL = "https://api.esculae.com/api/v1/course/category";
+    const categoryURL = "https://api-v2.esculae.com/api/v1/course/category";
     Promise.all([axiosInstance.get(categoryURL)])
       .then((responses) => {
         setCategories(responses[0].data);
@@ -148,12 +148,12 @@ const Product = ({
     setIsLoading(true);
     if (calledFrom === "profilepage") {
       coursesURL =
-        "https://api.esculae.com/api/v1/course/course-faculty/" + facultyId;
+        "https://api-v2.esculae.com/api/v1/course/course-faculty/" + facultyId;
     } else if (isTutor === true) {
-      coursesURL = "https://api.esculae.com/api/v1/course/course-faculty";
+      coursesURL = "https://api-v2.esculae.com/api/v1/course/course-faculty";
     } else if (isStudent === true) {
       coursesURL =
-        "https://api.esculae.com/api/v1/personal/student-enroll-course";
+        "https://api-v2.esculae.com/api/v1/personal/student-enroll-course";
     } else {
       if (window.location.search && window.location.search != "") {
         if (
@@ -165,13 +165,13 @@ const Product = ({
             .split("&")[0]
             .split("?")[1]
             .split("=")[1];
-          coursesURL = `https://api.esculae.com/api/v1/course/course?page=${currentPage}&filter=[{"field":"category","value":${cat !=="" ? cat: "\"\""}},{"field":"sub_category","value":${subCat !=="" ? subCat : "\"\""}}]&size=12&sort={"field": "updatedAt", "order": "DESC"}`;
+          coursesURL = `https://api-v2.esculae.com/api/v1/course/course?page=${currentPage}&filter=[{"field":"category","value":${cat !=="" ? cat: "\"\""}},{"field":"sub_category","value":${subCat !=="" ? subCat : "\"\""}}]&size=12&sort={"field": "updatedAt", "order": "DESC"}`;
         } else if (window.location.search.indexOf("search") > -1) {
           let searchValue = window.location.search.split("=")[1];
-          coursesURL = `https://api.esculae.com/api/v1/course/course?page=${currentPage}&size=12&filter=[{"field": "title", "value": "${searchValue}"}]`;
+          coursesURL = `https://api-v2.esculae.com/api/v1/course/course?page=${currentPage}&size=12&filter=[{"field": "title", "value": "${searchValue}"}]`;
         }
       } else {
-        coursesURL = `https://api.esculae.com/api/v1/course/course?page=${currentPage}&size=12&sort={"field": "updatedAt", "order": "DESC"}`;
+        coursesURL = `https://api-v2.esculae.com/api/v1/course/course?page=${currentPage}&size=12&sort={"field": "updatedAt", "order": "DESC"}`;
       }
     }
 
@@ -221,7 +221,7 @@ const Product = ({
   }, [currentPage, shouldUpdateCourse]);
   useEffect(() => {
     setsearchLoading(true);
-    let coursesURL = `https://api.esculae.com/api/v1/course/course?filter=[{"field": "title", "value": "${searchKey}"}]&page=1&size=${totalCourses}`;
+    let coursesURL = `https://api-v2.esculae.com/api/v1/course/course?filter=[{"field": "title", "value": "${searchKey}"}]&page=1&size=${totalCourses}`;
     axiosInstance
       .get(coursesURL, {
         headers: {
@@ -241,7 +241,7 @@ const Product = ({
     var faculty = "";
     setIsLoading(true);
     // dispatch(getAllCourses());
-    faculty = "https://api.esculae.com/api/v1/personal/faculty";
+    faculty = "https://api-v2.esculae.com/api/v1/personal/faculty";
     axiosInstance
       .get(faculty, {
         headers: {
@@ -262,7 +262,7 @@ const Product = ({
     setIsLoading(true);
     // dispatch(getAllCourses());
     faculty =
-      "https://api.esculae.com/api/v1/personal/student-enroll-course-payment-list";
+      "https://api-v2.esculae.com/api/v1/personal/student-enroll-course-payment-list";
     axiosInstance
       .get(faculty, {
         headers: {
@@ -286,7 +286,7 @@ const Product = ({
       var coursesURL = "";
       setIsLoading(true);
       coursesURL =
-        "https://api.esculae.com/api/v1/personal/student-enroll-course";
+        "https://api-v2.esculae.com/api/v1/personal/student-enroll-course";
       axiosInstance
         .get(coursesURL, {
           headers: {

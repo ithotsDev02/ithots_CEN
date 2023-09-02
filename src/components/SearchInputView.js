@@ -167,7 +167,7 @@ const SearchInputView = ({
                         >
                           {result.image ? (
                             <ResultImage
-                              src={"https://api.esculae.com/" + result.image}
+                              src={"https://api-v2.esculae.com/" + result.image}
                               style={{
                                 borderRadius: "5px",
                               }}

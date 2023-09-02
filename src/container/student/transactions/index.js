@@ -17,9 +17,9 @@ function TransactionTables({ from }) {
     setisLoading(true);
     let URL = "";
     if (from == "admin") {
-      URL = "https://api.esculae.com/api/v1/course/transactions";
+      URL = "https://api-v2.esculae.com/api/v1/course/transactions";
     } else {
-      URL = "https://api.esculae.com/api/v1/course/transactions/" + studentId;
+      URL = "https://api-v2.esculae.com/api/v1/course/transactions/" + studentId;
     }
     axiosInstance
       .get(URL, {

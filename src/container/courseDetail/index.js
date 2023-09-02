@@ -63,7 +63,7 @@ const CourseDetail = () => {
   useEffect(() => {
     // dispatch(getCouseInfo(id))
     setisLoading(true);
-    const coursesURL = "https://api.esculae.com/api/v1/course/course/" + id;
+    const coursesURL = "https://api-v2.esculae.com/api/v1/course/course/" + id;
     axiosInstance
       .get(coursesURL, {
         headers: {
@@ -83,7 +83,7 @@ const CourseDetail = () => {
     if (courseInfo && Object.keys(courseInfo).length > 0) {
       setisLoading(true);
       const coursesURL =
-        "https://api.esculae.com/api/v1/course/similarcourse/" +
+        "https://api-v2.esculae.com/api/v1/course/similarcourse/" +
         courseInfo.category;
       axiosInstance
         .get(coursesURL, {
@@ -103,7 +103,7 @@ const CourseDetail = () => {
   useEffect(() => {
     var faculty = "";
     // dispatch(getAllCourses());
-    faculty = "https://api.esculae.com/api/v1/personal/faculty";
+    faculty = "https://api-v2.esculae.com/api/v1/personal/faculty";
     axiosInstance
       .get(faculty, {
         headers: {
@@ -149,7 +149,7 @@ const CourseDetail = () => {
   }, [courseInfo, facultyList]);
 
   const getBatches = (created_by, course_id) => {
-    let url = `https://api.esculae.com/api/v1/course/batch?created_by=${created_by}&course_id=${course_id}`;
+    let url = `https://api-v2.esculae.com/api/v1/course/batch?created_by=${created_by}&course_id=${course_id}`;
     axiosInstance
       .get(url, {
         headers: {
@@ -178,9 +178,9 @@ const CourseDetail = () => {
   useEffect(() => {
     let Categories = [];
     let Subcategories = [];
-    const categoryURL = "https://api.esculae.com/api/v1/course/category";
+    const categoryURL = "https://api-v2.esculae.com/api/v1/course/category";
     const subCategoryURL =
-      "https://api.esculae.com/api/v1/course/sub-category";
+      "https://api-v2.esculae.com/api/v1/course/sub-category";
     Promise.all([
       axiosInstance.get(categoryURL),
       axiosInstance.get(subCategoryURL),
@@ -268,7 +268,7 @@ const CourseDetail = () => {
                           <Avatar
                             src={
                               (fullCoursedetails.created_by?.image &&
-                                "https://api.esculae.com/" +
+                                "https://api-v2.esculae.com/" +
                                 fullCoursedetails.created_by?.image) ||
                               ""
                             }
@@ -308,7 +308,7 @@ const CourseDetail = () => {
                               // marginRight: "5%",
                             }}
                             src={
-                              "https://api.esculae.com/" + courseInfo?.image
+                              "https://api-v2.esculae.com/" + courseInfo?.image
                             }
                             alt=""
                           />
@@ -447,7 +447,7 @@ const CourseDetail = () => {
                         <Avatar
                           src={
                             (fullCoursedetails.created_by?.image &&
-                              "https://api.esculae.com/" +
+                              "https://api-v2.esculae.com/" +
                               fullCoursedetails.created_by?.image) ||
                             ""
                           }

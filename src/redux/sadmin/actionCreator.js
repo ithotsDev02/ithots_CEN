@@ -21,7 +21,7 @@ const {
 } = actions;
 const getAllAdmins = () => {
   return async (dispatch) => {
-    let url = "https://api.esculae.com/api/v1/personal/admins";
+    let url = "https://api-v2.esculae.com/api/v1/personal/admins";
     dispatch(getAllAdminsBegin());
     axiosInstance
       .get(url, {
@@ -44,7 +44,7 @@ const createNewAdmin = (data) => {
   return async (dispatch) => {
     dispatch(createNewAdminBegin());
 
-    let url = "https://api.esculae.com/api/v1/personal/signup";
+    let url = "https://api-v2.esculae.com/api/v1/personal/signup";
     axiosInstance
       .post(url, JSON.stringify(data), {
         headers: {
@@ -70,7 +70,7 @@ const editAdmin = (data) => {
   return async (dispatch) => {
     dispatch(editAdminBegin());
 
-    let url = "https://api.esculae.com/api/v1/personal/signup";
+    let url = "https://api-v2.esculae.com/api/v1/personal/signup";
     axiosInstance
       .put(url, JSON.stringify(data), {
         headers: {
@@ -96,7 +96,7 @@ const deleteAdmin = (data) => {
   return async (dispatch) => {
     dispatch(deleteAdminBegin());
 
-    let url = "https://api.esculae.com/api/v1/personal/signup";
+    let url = "https://api-v2.esculae.com/api/v1/personal/signup";
     axiosInstance
       .put(url, JSON.stringify(data), {
         headers: {

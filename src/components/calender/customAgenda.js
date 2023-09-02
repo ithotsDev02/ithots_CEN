@@ -77,7 +77,7 @@ function Agenda(_ref) {
       .focus();
   };
   const launchmeeting = (batchId) => {
-    const batchURL = "https://api.esculae.com/api/v1/course/batch/" + batchId;
+    const batchURL = "https://api-v2.esculae.com/api/v1/course/batch/" + batchId;
     axiosInstance
       .get(batchURL, {
         headers: {

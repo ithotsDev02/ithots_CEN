@@ -133,9 +133,9 @@ const CreateCourse = ({ type, state }) => {
 
     let categories = [];
     let subcategories = [];
-    const categoryURL = "https://api.esculae.com/api/v1/course/category";
+    const categoryURL = "https://api-v2.esculae.com/api/v1/course/category";
     const subCategoryURL =
-      "https://api.esculae.com/api/v1/course/sub-category";
+      "https://api-v2.esculae.com/api/v1/course/sub-category";
     Promise.all([
       axiosInstance.get(categoryURL),
       axiosInstance.get(subCategoryURL),
@@ -308,7 +308,7 @@ const CreateCourse = ({ type, state }) => {
   };
   const getBatchInfo = (eventId) => {
     if (eventId !== "") {
-      let url = "https://api.esculae.com/api/v1/course/batch/" + eventId;
+      let url = "https://api-v2.esculae.com/api/v1/course/batch/" + eventId;
       axiosInstance
         .get(url, {
           headers: {
@@ -339,7 +339,7 @@ const CreateCourse = ({ type, state }) => {
     alert("Selected a date from calender");
   };
   const getBatches = () => {
-    let url = "https://api.esculae.com/api/v1/course/batch";
+    let url = "https://api-v2.esculae.com/api/v1/course/batch";
     axiosInstance
       .get(url, {
         headers: {
@@ -399,10 +399,10 @@ const CreateCourse = ({ type, state }) => {
     setage(parseInt(location?.state?.courseInfo?.age_limit));
     setTags(location?.state?.courseInfo?.tags);
     let a = createFile(
-      "https://api.esculae.com/" + location?.state?.courseInfo?.image
+      "https://api-v2.esculae.com/" + location?.state?.courseInfo?.image
     );
     toDataURL(
-      "https://api.esculae.com/" + location?.state?.courseInfo?.image
+      "https://api-v2.esculae.com/" + location?.state?.courseInfo?.image
     ).then((dataUrl) => {
       var fileData = dataURLtoFile(dataUrl, "imageName.jpg");
       setcoverImage(fileData);
@@ -412,9 +412,9 @@ const CreateCourse = ({ type, state }) => {
       name: "preview.png",
       status: "done",
       url:
-        "https://api.esculae.com/" + location?.state?.courseInfo?.image || "",
+        "https://api-v2.esculae.com/" + location?.state?.courseInfo?.image || "",
       thumbUrl:
-        "https://api.esculae.com/" + location?.state?.courseInfo?.image || "",
+        "https://api-v2.esculae.com/" + location?.state?.courseInfo?.image || "",
     });
     console.log("sadasvrdsdc", location?.state?.courseInfo);
   }, [location, subcategories]);

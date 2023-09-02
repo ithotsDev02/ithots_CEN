@@ -73,7 +73,7 @@
   cursor: pointer;
 }
 .ant-card-cover img {
-  border-radius: 10px !important;
+  /* border-radius: 10px !important; */
 }
 
 .course_discription {
@@ -283,6 +283,9 @@ footer {
 }
 .imgcontainer {
   position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 190px;
 }
 .bottomright > .ant-rate {
   padding: 3px;
@@ -314,4 +317,42 @@ footer {
 }
 .ant-card{
   border: none;
+}
+
+@media (min-width: 576px){
+  .imgcontainer{
+    height: 130px; 
+    width: auto;
+  }
+}
+
+@media (min-width: 768px){
+  .imgcontainer{
+    height: 150px; 
+    width: auto;
+  }
+}
+@media (min-width: 992px){
+  .imgcontainer{
+    height: 130px; 
+    width: auto;
+  }
+}
+
+@media (min-width: 1200px){
+
+}
+
+@media (min-width: 1400px){
+  .imgcontainer{
+    height: 150px; 
+    width: auto;
+  }
+}
+
+@media (min-width: 1600px){
+  .imgcontainer{
+    height: 190px; 
+    width: auto;
+  }
 }

@@ -41,7 +41,7 @@ const {
 
 const createTransaction = (courseid, data, batchId, enrollType, facultyId) => {
   return async (dispatch) => {
-    let url = "https://api.esculae.com/api/v1/course/transactions";
+    let url = "https://api-v2.esculae.com/api/v1/course/transactions";
     dispatch(create_transaction_begin());
     console.log("the datsdasd", data);
     axiosInstance
@@ -69,7 +69,7 @@ const createTransaction = (courseid, data, batchId, enrollType, facultyId) => {
 };
 
 const enrollStudent = (courseId, studentId, batchId, enrollType, facultyId) => {
-  let url = "https://api.esculae.com/api/v1/personal/student-enroll-course";
+  let url = "https://api-v2.esculae.com/api/v1/personal/student-enroll-course";
   axiosInstance
     .post(url, {
       CourseId: parseInt(courseId),
@@ -96,7 +96,7 @@ const requestBatchCreation = (
   facultyfullname,
   facultyemail
 ) => {
-  let url = "https://api.esculae.com/api/v1/personal/student-request-batch";
+  let url = "https://api-v2.esculae.com/api/v1/personal/student-request-batch";
   axiosInstance
     .post(url, {
       CourseId: parseInt(courseId),
@@ -119,7 +119,7 @@ const requestBatchCreation = (
 
 const editCourse = (id, data) => {
   return async (dispatch) => {
-    let url = "https://api.esculae.com/api/v1/course/course/" + id;
+    let url = "https://api-v2.esculae.com/api/v1/course/course/" + id;
     dispatch(editCoursesBegin());
     axiosInstance
       .put(url, data)
@@ -138,7 +138,7 @@ const editCourse = (id, data) => {
 };
 const disable = (id, data, calllback) => {
   return async (dispatch) => {
-    let url = "https://api.esculae.com/api/v1/course/course/" + id;
+    let url = "https://api-v2.esculae.com/api/v1/course/course/" + id;
     dispatch(deleteCoursesBegin());
     axiosInstance
       .put(url, JSON.stringify(data), {
@@ -165,7 +165,7 @@ const disable = (id, data, calllback) => {
 const getCouseInfo = (id) => {
   return async (dispatch) => {
     dispatch(getCourseInfoBegin());
-    let url = "https://api.esculae.com/api/v1/course/course/" + id;
+    let url = "https://api-v2.esculae.com/api/v1/course/course/" + id;
     axiosInstance
       .get(url, {
         headers: {
@@ -189,9 +189,9 @@ const getBatch = (id) => {
     dispatch(getBatchBegin());
     var url = "";
     if (id === null) {
-      url = "https://api.esculae.com/api/v1/course/batch";
+      url = "https://api-v2.esculae.com/api/v1/course/batch";
     } else {
-      url = "https://api.esculae.com/api/v1/course/batch/" + id;
+      url = "https://api-v2.esculae.com/api/v1/course/batch/" + id;
     }
     axiosInstance
       .get(url, {
@@ -212,7 +212,7 @@ const getBatch = (id) => {
 const createBatch = (data) => {
   return async (dispatch) => {
     dispatch(createBatchBegin());
-    let url = "https://api.esculae.com/api/v1/course/batch";
+    let url = "https://api-v2.esculae.com/api/v1/course/batch";
     axiosInstance
       .post(url, data, {
         headers: {
@@ -241,7 +241,7 @@ const createBatch = (data) => {
 };
 const editBatch = (id, data) => {
   return async (dispatch) => {
-    let url = "https://api.esculae.com/api/v1/course/batch/" + id;
+    let url = "https://api-v2.esculae.com/api/v1/course/batch/" + id;
     dispatch(editBatchBegin());
     axiosInstance
       .put(url, data)
@@ -259,7 +259,7 @@ const editBatch = (id, data) => {
 };
 const deleteBatch = (id) => {
   return async (dispatch) => {
-    let url = "https://api.esculae.com/api/v1/course/batch/" + id;
+    let url = "https://api-v2.esculae.com/api/v1/course/batch/" + id;
     dispatch(deleteBatchBegin());
     axiosInstance
       .delete(url, {

@@ -11,7 +11,7 @@ const {
 const readNotificationList = () => {
   return async (dispatch) => {
     dispatch(readNotificationBegin());
-    let url = "https://api.esculae.com/api/v1/personal/student-request-batch";
+    let url = "https://api-v2.esculae.com/api/v1/personal/student-request-batch";
 
     axiosInstance
       .get(url, {
@@ -34,7 +34,7 @@ const readNotificationList = () => {
 const deleteNotification = (id) => {
   return async (dispatch) => {
     let url =
-      "https://api.esculae.com/api/v1/personal/student-request-batch/" + id;
+      "https://api-v2.esculae.com/api/v1/personal/student-request-batch/" + id;
 
     axiosInstance
       .delete(url, {

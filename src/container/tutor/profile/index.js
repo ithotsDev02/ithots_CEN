@@ -33,7 +33,7 @@ const TutorProfile = () => {
   console.log("the id is", id);
   useEffect(() => {
     setisLoading(true);
-    const coursesURL = "https://api.esculae.com/api/v1/personal/faculty/" + id;
+    const coursesURL = "https://api-v2.esculae.com/api/v1/personal/faculty/" + id;
     axiosInstance
       .get(coursesURL, {
         headers: {

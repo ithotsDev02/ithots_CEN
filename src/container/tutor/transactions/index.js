@@ -17,7 +17,7 @@ function TransactionTables() {
   useEffect(() => {
     setisLoading(true);
     let URL = "";
-    URL = "https://api.esculae.com/api/v1/course/transactions";
+    URL = "https://api-v2.esculae.com/api/v1/course/transactions";
     axiosInstance
       .get(URL, {
         headers: {

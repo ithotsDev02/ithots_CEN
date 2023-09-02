@@ -65,9 +65,9 @@ const ThemeLayout = (WrappedComponent, type) => {
     componentDidMount() {
       let categories = [];
       let subcategories = [];
-      const categoryURL = "https://api.esculae.com/api/v1/course/category";
+      const categoryURL = "https://api-v2.esculae.com/api/v1/course/category";
       const subCategoryURL =
-        "https://api.esculae.com/api/v1/course/sub-category";
+        "https://api-v2.esculae.com/api/v1/course/sub-category";
       this.setState({ isLoading: true });
       Promise.all([
         axiosInstance.get(categoryURL),

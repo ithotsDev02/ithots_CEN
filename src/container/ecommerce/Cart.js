@@ -56,7 +56,7 @@ const ShoppingCart = () => {
   useEffect(() => {
     setLocLoading(true);
     var coursesURL =
-      "https://api.esculae.com/api/v1/personal/student-enroll-course";
+      "https://api-v2.esculae.com/api/v1/personal/student-enroll-course";
     axiosInstance
       .get(coursesURL, {
         headers: {
@@ -251,7 +251,7 @@ const ShoppingCart = () => {
     //cashfree integration
     let randTxnID = Math.floor(100000 + Math.random() * 900000);
     const coursesURL =
-      "https://api.esculae.com/api/v1/course/calculateSecretKey";
+      "https://api-v2.esculae.com/api/v1/course/calculateSecretKey";
     axiosInstance
       .post(
         coursesURL,

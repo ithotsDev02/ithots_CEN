@@ -33,7 +33,7 @@ const {
 } = actions;
 const getCategories = () => {
   return async (dispatch) => {
-    let url = "https://api.esculae.com/api/v1/course/category";
+    let url = "https://api-v2.esculae.com/api/v1/course/category";
     dispatch(getCategoriesBegin());
     axiosInstance
       .get(url, {
@@ -56,7 +56,7 @@ const createCategory = (categoryData) => {
   return async (dispatch) => {
     dispatch(createCategoryBegin());
 
-    let url = "https://api.esculae.com/api/v1/course/category";
+    let url = "https://api-v2.esculae.com/api/v1/course/category";
     axiosInstance
       .post(url, JSON.stringify(categoryData), {
         headers: {
@@ -80,7 +80,7 @@ const createCategory = (categoryData) => {
 const getSubCategories = () => {
   return async (dispatch) => {
     dispatch(getSubCategoriesBegin());
-    let url = "https://api.esculae.com/api/v1/course/sub-category";
+    let url = "https://api-v2.esculae.com/api/v1/course/sub-category";
     axiosInstance
       .get(url, {
         headers: {
@@ -100,7 +100,7 @@ const getSubCategories = () => {
 };
 const createSubCategory = (categoryData) => {
   return async (dispatch) => {
-    let url = "https://api.esculae.com/api/v1/course/sub-category";
+    let url = "https://api-v2.esculae.com/api/v1/course/sub-category";
     dispatch(createSubCategoryBegin());
     axiosInstance
       .post(url, JSON.stringify(categoryData), {
@@ -124,7 +124,7 @@ const createSubCategory = (categoryData) => {
 const editCategory = (id, categoryData) => {
   return async (dispatch) => {
     dispatch(editCategoryBegin());
-    let url = "https://api.esculae.com/api/v1/course/category/" + id;
+    let url = "https://api-v2.esculae.com/api/v1/course/category/" + id;
     axiosInstance
       .put(url, JSON.stringify(categoryData), {
         headers: {
@@ -147,7 +147,7 @@ const editSubCategory = (id, categoryData) => {
   return async (dispatch) => {
     dispatch(editSubCategoryBegin());
 
-    let url = "https://api.esculae.com/api/v1/course/sub-category/" + id;
+    let url = "https://api-v2.esculae.com/api/v1/course/sub-category/" + id;
     axiosInstance
       .put(url, JSON.stringify(categoryData), {
         headers: {
@@ -168,7 +168,7 @@ const editSubCategory = (id, categoryData) => {
 };
 const deleteCategory = (id, categoryData) => {
   return async (dispatch) => {
-    let url = "https://api.esculae.com/api/v1/course/category/" + id;
+    let url = "https://api-v2.esculae.com/api/v1/course/category/" + id;
     axiosInstance
       .put(url, JSON.stringify(categoryData), {
         headers: {
@@ -193,7 +193,7 @@ const deleteSubCategory = (id, categoryData) => {
 
   return async (dispatch) => {
     dispatch(deleteSubCategoryBegin());
-    let url = "https://api.esculae.com/api/v1/course/sub-category/" + id;
+    let url = "https://api-v2.esculae.com/api/v1/course/sub-category/" + id;
     axiosInstance
       .put(url, JSON.stringify(categoryData), {
         headers: {
