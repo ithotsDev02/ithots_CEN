@@ -101,6 +101,7 @@ const CourseDetail = () => {
     }
   }, [courseInfo]);
   useEffect(() => {
+    setisLoading(true);
     var faculty = "";
     // dispatch(getAllCourses());
     faculty = "https://api-v2.esculae.com/api/v1/personal/faculty";
@@ -113,6 +114,7 @@ const CourseDetail = () => {
       .then((resp) => {
         console.log("the data is", resp.data.data);
         setfacultyList(resp.data?.data);
+        setisLoading(false);
       })
       .catch((err) => {
         console.log(err);
@@ -146,6 +148,7 @@ const CourseDetail = () => {
         (tmpCourses.created_by = filteredTutor),
         setfullCoursedetails(tmpCourses);
     }
+    
   }, [courseInfo, facultyList]);
 
   const getBatches = (created_by, course_id) => {
@@ -435,7 +438,7 @@ const CourseDetail = () => {
                             {courseInfo?.special_description}
                           </p>
                         </div>
-                        <Divider></Divider>
+                        {/* <Divider></Divider>
 
                         <div className="course_specialDescription">
                           <span style={{ fontSize: 20, fontWeight: 500 }}>
@@ -478,7 +481,7 @@ const CourseDetail = () => {
                           <p style={{ fontSize: "14px", fontWeight: 400 }}>
                             Test {courseInfo?.special_description}
                           </p>
-                        </div>
+                        </div> */}
                         <Divider></Divider>
                         <div className="rating">
                           <span
@@ -780,6 +783,7 @@ const CourseDetail = () => {
                           price={fullCoursedetails?.price || 0}
                           calledFrom={calledFrom}
                         />
+                        {console.log("cc"+fullCoursedetails)}
                       </Suspense>
                     </Col>
                   </Row>

@@ -319,6 +319,11 @@ footer {
   border: none;
 }
 
+.layout_width{
+  max-width: 1400px;
+  margin: auto !important;
+}
+
 @media (min-width: 576px){
   .imgcontainer{
     height: 130px; 
@@ -337,15 +342,26 @@ footer {
     height: 130px; 
     width: auto;
   }
+  .layout_width{
+    margin: auto !important;
+    
+  }
 }
 
 @media (min-width: 1200px){
-
+  .imgcontainer{
+    height: 170px; 
+    width: auto;
+  }
+  .layout_width{
+    margin: auto !important;
+    
+  }
 }
 
 @media (min-width: 1400px){
   .imgcontainer{
-    height: 150px; 
+    height: 190px; 
     width: auto;
   }
 }

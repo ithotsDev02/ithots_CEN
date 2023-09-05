@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import ProductCards from "./ProductCards";
 import Heading from "../../../../components/heading/heading";
 import successNotification from "../../../../components/notification/successNotification";
+import "./style.css";
 
 import {
   Banner1,
@@ -221,21 +222,22 @@ const Grid = ({
       <Row
         style={{
           marginTop: "20px",
-          marginLeft:
-            isTutor || calledFrom == "admin" || calledFrom == "profilepage"
-              ? // ||
-              // calledFrom == "Student" ||
-              // calledFrom == "studentAllCourses"
-              "0%"
-              : "10%",
-          marginRight:
-            isTutor || calledFrom == "admin" || calledFrom == "profilepage"
-              ? // ||
-              // calledFrom == "Student" ||
-              // calledFrom == "studentAllCourses"
-              "0%"
-              : "10%",
+          // marginLeft:
+          //   isTutor || calledFrom == "admin" || calledFrom == "profilepage"
+          //     ? // ||
+          //     // calledFrom == "Student" ||
+          //     // calledFrom == "studentAllCourses"
+          //     "0%"
+          //     : "10%",
+          // marginRight:
+          //   isTutor || calledFrom == "admin" || calledFrom == "profilepage"
+          //     ? // ||
+          //     // calledFrom == "Student" ||
+          //     // calledFrom == "studentAllCourses"
+          //     "0%"
+          //     : "10%",
         }}
+        className="layout_width"
         gutter={30}
       >
         {isLoading ? (

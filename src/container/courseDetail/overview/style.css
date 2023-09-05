@@ -3,6 +3,17 @@
     /* padding: 0 20px; */
   }
 }
+.tutor_info{
+margin-top: 15px;
+  padding: 15px;
+  border: 0.5px solid #d1d7dc;
+}
+.bdr{
+  border-radius:5px;
+}
+.mb-20{margin-bottom:20px}
+.pb-10{padding-bottom:10px;}
+.f-bold{font-weight:bold;}
 /* 
    @media only screen and (min-width: 600px) {
    margin-top: -30px;

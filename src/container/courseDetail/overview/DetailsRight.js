@@ -21,9 +21,10 @@ import { Form, Input, Radio } from "antd";
 import { Rate } from "antd";
 import axiosInstance from "../../../config/axoisconfig";
 import errorNotification from "../../../components/notification/errorNotification";
+import axios from "axios";
 const { TextArea } = Input;
 const desc = ["terrible", "bad", "normal", "good", "wonderful"];
-const DetailsRight = ({ price, courseBatches, courseInfo, calledFrom }) => {
+const DetailsRight = ({ price, courseBatches, courseInfo, calledFrom, filteredTutor }) => {
   const cartData = useSelector((state) => state.cart.data);
   const dispatch = useDispatch();
   const history = useHistory();
@@ -179,8 +180,44 @@ const DetailsRight = ({ price, courseBatches, courseInfo, calledFrom }) => {
     }
   };
 
+  // // State variable to hold tutor-information
+  // const [tutorInfo, setTutorInfo] = useState([]);
+  // const [courseDetails, setCourseDetails] = useState(null);
+
+  // // let { id } = useParams();
+
+  // useEffect(()=>{
+  //   axios.get("https://api-v2.esculae.com/api/v1/personal/faculty")
+  //   .then((res)=>{
+  //     const tutorData = res.data.data;
+
+  //     setTutorInfo(tutorData);
+    
+  //   })
+  //   .catch((err)=>{
+  //     console.log("Error fetching Tutor info from API:",err);
+  //   });
+  //    // Fetch course details
+  //   // Modify this part to fetch course details based on courseInfo.id
+  //   axios.get(`https://api-v2.esculae.com/api/v1/course/course/${courseInfo.id}`)
+  //     .then((res) => {
+  //       const courseData = res.data; // Adjust the response structure as per your API
+  //       setCourseDetails(courseData);
+  //     })
+  //     .catch((err) => {
+  //       console.log("Error fetching Course info from API:", err);
+  //     });
+  // },[courseInfo.id])
+
+  // // Match tutor and course based on their IDs
+  // const matchedTutor = tutorInfo.find((tutor) => tutor.id === courseDetails?.tutorId);
+
+//  console.log("det"+courseInfo)
+
   return (
+    
     <div className="batchInfo">
+      
       <div>
         {" "}
         {calledFrom == "tutor" ? (
@@ -208,6 +245,41 @@ const DetailsRight = ({ price, courseBatches, courseInfo, calledFrom }) => {
         <React.Fragment>
           {calledFrom !== "Student" ? (
             <>
+               <div className="tutor_info bdr mb-20">
+                   <h2>Tutor Details</h2>
+                   <div class="ant-row pb-10">
+                      <div className="ant-col-lg-10 ant-col-xxl-8">Tutor Name :</div>
+                      <div className="ant-col-lg-14 ant-col-xxl-16"><span className="f-bold">Stephen</span></div>
+                   </div>
+                   <div class="ant-row pb-10">
+                      <div className="ant-col-lg-10 ant-col-xxl-8">phone number :</div>
+                      <div className="ant-col-lg-14 ant-col-xxl-16"><span className="f-bold">9840585858</span></div>
+                   </div>
+                   <div class="ant-row pb-10">
+                      <div className="ant-col-lg-10 ant-col-xxl-8">State :</div>
+                      <div className="ant-col-lg-14 ant-col-xxl-16"><span className="f-bold">Tamilnadu</span></div>
+                   </div>
+                   <div class="ant-row pb-10">
+                      <div className="ant-col-lg-10 ant-col-xxl-8">Country :</div>
+                      <div className="ant-col-lg-14 ant-col-xxl-16"><span className="f-bold">India</span></div>
+                   </div>
+                   <div class="ant-row pb-10">
+                      <div className="ant-col-lg-10 ant-col-xxl-8">Address :</div>
+                      <div className="ant-col-lg-14 ant-col-xxl-16"><span className="f-bold">No 3, I st Main Road, Annanagar East, Chennai- 600084.</span></div>
+                   </div>
+                  
+               </div>
+               {console.log(courseInfo.created_by)}
+               <br/>
+            {/* Display matched tutor's details */}
+        {/* {matchedTutor && (
+          <div>
+            <h2>Tutor Details:</h2>
+            <p>Name: {matchedTutor.name}</p>
+            <p>Email: {matchedTutor.email}</p>
+            
+          </div>
+        )} */}
               <span
                 style={{
                   fontSize: 20,

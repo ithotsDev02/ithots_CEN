@@ -156,3 +156,7 @@
     font-weight: 600;
   }
 }
+
+br {
+  display: none;
+}
